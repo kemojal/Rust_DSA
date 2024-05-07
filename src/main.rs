@@ -25,5 +25,11 @@ fn main() {
 
     let mut flowerbed2  = vec![1,0,0,0,1];
     let n2 = 2;
-    print!("can flower = {}", leet_75::can_flower(flowerbed2, n2));
+    print!("can flower = {} \n", leet_75::can_flower(flowerbed2, n2));
+
+
+    //max average subarray
+    let nums = vec![1,12,-5,-6,50,3];
+    let k = 4;
+    print!("max average subarray = {} \n", leet_75::max_average_subarray(nums, k));
 }

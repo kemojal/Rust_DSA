@@ -40,3 +40,20 @@ pub fn can_flower(mut flower_bed: Vec<i32>, n: i32,) -> bool {
 
     return empty_plots >= n;
 }
+
+pub fn max_average_subarray(nums: Vec<i32>, k: i32) -> f64 {
+    let mut sum = 0;
+    for i in 0..k {
+        sum += nums[i as usize];
+    }
+
+    let mut max_sum = sum;
+    for i in k..nums.len() as i32 {
+        sum += nums[i as usize] - nums[(i - k) as usize];
+        if sum > max_sum {
+            max_sum = sum;
+        }
+    }
+
+    return  max_sum as f64 / k as f64;
+}
